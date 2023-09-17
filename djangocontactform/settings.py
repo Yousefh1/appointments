@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
+from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -27,10 +28,21 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-EMAIL_HOST = 'smtp.mailtrap.io'
-EMAIL_HOST_USER = '0e30e8a524ec9f'
-EMAIL_HOST_PASSWORD = 'efda6a3a1dc857'
+
+
+
+
+EMAIL_HOST = 'sandbox.smtp.mailtrap.io'
+EMAIL_HOST_USER = '5d0bf905c7390b'
+EMAIL_HOST_PASSWORD = '75d787f3fb7860'
 EMAIL_PORT = '2525'
+
+# EMAIL_HOST = 'os.environ.get("EMAIL_HOST")'
+# EMAIL_HOST_USER = 'os.environ.get("EMAIL_HOST_USER")'
+# EMAIL_HOST_PASSWORD = 'os.environ.get("EMAIL_HOST_PASSWORD")'
+# EMAIL_PORT = 'os.environ.get("EMAIL_PORT")'
+
+
 
 # Application definition
 
